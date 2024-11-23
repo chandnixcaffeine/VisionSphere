@@ -672,6 +672,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 2vw;
+    padding-bottom: 0vw;
     gap: 1vw;
 }
 #lft{
