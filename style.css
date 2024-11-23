@@ -672,7 +672,6 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 2vw;
-    padding-bottom: 4vw;
     gap: 1vw;
 }
 #lft{
@@ -758,6 +757,7 @@ footer{
     padding: 2vw;
     padding-top: 0vw;
     background-color: #151515;
+    padding-bottom: 4vw;
     
 }
 #part3{
