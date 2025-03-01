@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+*:focus { outline: none; }
+body {
+    width: 100%;
+    min-height: 100vh; /* Changed from max-height to min-height to prevent scrollbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    color: #FFF;
+}
+h2{
+    font-family: "coastgane";
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 10px;
+}
+.container { 
+    width: 800px; 
+    height: fit-content; /* Adjusted to fit content dynamically, no fixed height to avoid scrollbar */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #151515; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+    overflow: hidden; 
+    font-family: "cagke";
+    position: relative; 
+    border-radius: 10px; 
+    padding-bottom: 1vw;
+    flex-direction: column; /* Stack form and inquiries vertically */
+}
+
+form { 
+    min-width: 250px !important; 
+    width: 90%; 
+    padding: 30px 20px; 
+    position: relative; 
+    z-index: 2; /* Above background */
+    background-color: rgba(21, 21, 21, 0.9); /* Slight transparency for readability */
+}
+.heading { 
+    font-size: 30px; 
+    text-transform: capitalize; 
+    margin-bottom: 60px; 
+    text-align: center; 
+}
+label {
+    font-size: 16px; 
+    display: block; 
+    font-family: "coastgane";
+    margin: 0px 0; 
+    text-transform: capitalize; 
+}
+input {
+    font-size: 16px; 
+    display: block; 
+    width: 100%; /* Full width within form */
+    border: none; 
+    border-bottom: 1px solid #faf8f8;
+    margin-bottom: 3vw; 
+    padding: 0.5vw 10vw;
+    background-color: transparent; /* Transparent background for inputs */
+    color: #fff; /* White text */
+    font-family: "coastgane";
+}
+input:focus {
+    background-color: transparent; /* Keep transparent when focused */
+    color: #fff; /* White text when focused */
+}
+select {
+    font-size: 16px;
+    display: block;
+    width: 100%; /* Full width within form */
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 20px;
+    padding: 0.5vw 10vw;
+    background-color: #151515 !important;
+    color: #FFF;
+    font-family: "coastgane";
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+}
+select:focus {
+    outline: none;
+    background-color: transparent; /* Keep transparent when focused */
+    color: #fff; /* White text when focused */
+}
+textarea {
+    font-size: 16px;
+    display: block;
+    width: 100%; /* Full width within form */
+    border: none;
+    border-bottom: 1px solid #faf8f8;
+    margin-bottom: 20px;
+    padding: 0.5vw 10vw;
+    background-color: transparent; /* Transparent background for textarea */
+    color: #fff; /* White text */
+    font-family: "canopee";
+    height: 100px; /* Taller for messages, adjust as needed */
+    resize: vertical; /* Allow vertical resizing */
+}
+textarea:focus {
+    background-color: transparent; /* Keep transparent when focused */
+    color: #fff; /* White text when focused */
+}
+.login-btn {
+    width: 130px;
+    height: 40px;
+    text-transform: capitalize;
+    border-radius: 0.5vw;
+    color: #151515;
+    border: none;
+    background-color: #383efd; /* Blue button, matching your original color */
+    color: #fff; /* White text for contrast */
+    display: block;
+    font-weight: 900;
+    font-family: 'coastgane';
+    cursor: pointer;
+    margin: 4vw 0px; /* Center the button */
+}
+.login-btn:hover {
+    background-color: #2c2ee0; /* Darker blue on hover */
+}
+
+/* Response and inquiries styling */
+#response, #inquiries {
+    width: 90%; /* Match form width */
+    margin: 20px auto 0; /* Center and start on new line below form/response */
+    text-align: center;
+    color: #fff;
+}
+
+#inquiryList {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+#inquiryList li {
+    background-color: #292727;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: "canopee";
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 750px) {
+    .container { width: 350px; height: auto; }
+    .bg { display: none; }
+    form { width: 100%; padding: 20px; }
+    #response, #inquiries { width: 100%; margin: 20px 0 0; }
+    input, select, textarea { width: 100%; padding: 10px; } /* Adjust for mobile */
+    .login-btn { width: 100%; margin: 20px 0; }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionSphere - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <form id="contactForm">
+            <h2 class="heading">CONTACT FORM</h2>
+            
+            <label for="name">Your Name: </label>
+            <input type="text" name="name" id="name"  required>
+            
+            <label for="email">Your Email: </label>
+            <input type="email" name="email" id="email" required>
+            
+            <label for="service">Service: </label>
+            <select name="service" id="serviceSelect" required>
+                <option value="">Select a Service</option>
+                <option value="Web Development">Web Development</option>
+                <option value="App Development">App Development</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="SEO">SEO</option>
+            </select>
+            <br>
+            <label for="message">Your Message: </label>
+            <textarea name="message" id="message" required></textarea>
+            
+            <button class="login-btn" type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+        <div id="inquiries">
+            <h2>Recent Inquiries</h2>
+            <ul id="inquiryList"></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Placeholder for form submission (we'll update later)
+        $('#contactForm').submit(function(e) {
+            e.preventDefault();
+            $('#response').text('Form submission will work after backend setup.');
+        });
+    });
+    </script>
+</body>
+</html>
